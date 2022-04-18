@@ -2,6 +2,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.fail;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -12,7 +13,7 @@ public class ConvertibleCarTests {
 	public void setup() {
 		String model = "Miata";
 		IEngine engine = new SmallEngine();
-		IIgnition ignitionSystem = new ElectronicIgnition();
+		ElectronicIgnition ignitionSystem = new ElectronicIgnition();
 
 		this.Car = new ConvertibleCar(model, engine, ignitionSystem);
 	}
@@ -21,15 +22,15 @@ public class ConvertibleCarTests {
 	public void canBuildConvertibleCar() {
 		ConvertibleCar car = this.Car;
 
-		String actualModel = car.getModel();
+		String actualModel = "Miata";
 
-		assertEquals(actualModel, Car.getModel() , "");
+		assertEquals(actualModel, Car.getModel(), "it is not same model");
 	}
 
 	@Test
 	public void canStartConvertibleCar() {
 		ConvertibleCar car = this.Car;
-		
+
 		boolean isStarted = car.getIsStarted();
 
 		assertTrue(isStarted, "");
@@ -37,11 +38,21 @@ public class ConvertibleCarTests {
 
 	@Test
 	public void canLowerTop() {
-		fail("not implemented yet");
+		ConvertibleCar car = this.Car;
+
+		car.start();
+		boolean isLowerTop = car.LowerTop();
+
+		Assert.assertTrue(isLowerTop, "it is not");
 	}
 
 	@Test
 	public void canRaiseTop() {
-		fail("not implemented yet");
+		ConvertibleCar car = this.Car;
+
+		boolean isRaiseTop = car.RaiseTop();
+
+		Assert.assertTrue(isRaiseTop, "it is not");
+
 	}
 }

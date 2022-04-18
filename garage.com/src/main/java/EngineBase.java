@@ -7,9 +7,10 @@ public abstract class EngineBase implements IEngine {
 	}
 
 	public boolean getIsStarted() {
+		start();
 		return this.isStarted;
 	}
-	
+
 	public int getCylinderCount() {
 		return cylinderCount;
 	}
