@@ -40,7 +40,7 @@ public class ConvertibleCarTests {
 	public void canLowerTop() {
 		ConvertibleCar car = this.Car;
 
-		car.start();
+		
 		boolean isLowerTop = car.LowerTop();
 
 		Assert.assertTrue(isLowerTop, "it is not");
