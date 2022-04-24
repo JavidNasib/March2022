@@ -12,12 +12,12 @@ public class ConvertibleCar extends MotorizedVehicle {
 		return odometer;
 	}
 
-	public boolean LowerTop() {
+	public boolean getLowerTop() {
 
 		return this.IsTopLower = true;
 	}
 
-	public boolean RaiseTop() {
+	public boolean getRaiseTop() {
 
 		return this.IsTopRaise = true;
 	}

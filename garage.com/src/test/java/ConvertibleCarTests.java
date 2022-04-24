@@ -25,6 +25,7 @@ public class ConvertibleCarTests {
 		String actualModel = "Miata";
 
 		assertEquals(actualModel, Car.getModel(), "it is not same model");
+
 	}
 
 	@Test

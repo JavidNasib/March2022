@@ -23,6 +23,7 @@ public class CarTests {
 		String actualModel = "Corvette";
 
 		assertEquals(actualModel, Car.getModel(), "it is not same model");
+
 	}
 
 	@Test

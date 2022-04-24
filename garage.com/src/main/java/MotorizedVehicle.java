@@ -1,5 +1,5 @@
-public abstract class MotorizedVehicle implements ICar {
-	public String color;// it is public and thats why we have not getters and setters
+public abstract class MotorizedVehicle  {
+	public String color;
 	private IEngine engine;
 	private String model;
 	private ElectronicIgnition ignitionSystem;
@@ -11,11 +11,12 @@ public abstract class MotorizedVehicle implements ICar {
 	}
 
 	public void start() {
-		this.ignitionSystem.turnOn();// we have not access turnon and start
+		this.ignitionSystem.turnOn();
 		this.engine.start();
 	}
 
 	public boolean getIsStarted() {
+
 		return this.ignitionSystem.getIsOn() && this.engine.getIsStarted();
 
 	}

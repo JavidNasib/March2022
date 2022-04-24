@@ -4,11 +4,13 @@ public abstract class EngineBase implements IEngine {
 
 	public void start() {
 		this.isStarted = true;
+
 	}
 
 	public boolean getIsStarted() {
 		start();
 		return this.isStarted;
+
 	}
 
 	public int getCylinderCount() {
