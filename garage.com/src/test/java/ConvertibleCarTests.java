@@ -31,6 +31,7 @@ public class ConvertibleCarTests {
 	public void canStartConvertibleCar() {
 		ConvertibleCar car = this.Car;
 
+		car.start();
 		boolean isStarted = car.getIsStarted();
 
 		assertTrue(isStarted, "");
@@ -40,8 +41,7 @@ public class ConvertibleCarTests {
 	public void canLowerTop() {
 		ConvertibleCar car = this.Car;
 
-		car.start();
-		boolean isLowerTop = car.LowerTop();
+		boolean isLowerTop = car.getLowerTop();
 
 		Assert.assertTrue(isLowerTop, "it is not");
 	}
@@ -50,7 +50,7 @@ public class ConvertibleCarTests {
 	public void canRaiseTop() {
 		ConvertibleCar car = this.Car;
 
-		boolean isRaiseTop = car.RaiseTop();
+		boolean isRaiseTop = car.getRaiseTop();
 
 		Assert.assertTrue(isRaiseTop, "it is not");
 
