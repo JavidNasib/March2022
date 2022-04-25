@@ -35,7 +35,7 @@ public class ConvertibleCarTests {
 		car.start();
 		boolean isStarted = car.getIsStarted();
 
-		assertTrue(isStarted, "");
+		assertTrue(isStarted, "not started");
 	}
 
 	@Test
